@@ -1,11 +1,182 @@
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
+/* 
 
 button:hover{
   cursor: pointer;
   background-color: black;
   color: white;
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.App {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 20px;
+  width: 45%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: linear-gradient(to bottom, #ffffff, #e6e4ff);
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  text-align: center;
+  color: #333;
+}
+
+.card button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: #45a049;
+}
+
+.employee-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.employee-item.dimmed {
+  opacity: 0.4;
+}
+
+.team-member {
+  margin-top: 10px;
+}
+
+.sort-button {
+  padding: 5px 10px;
+  width: auto;
+  align-self: center;
+  background-color: #008CBA;
+}
+
+.sort-button:hover {
+  background-color: #007ba7;
+}
+
+.average-age {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #555;
+} */
+
+
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Light blue gradient background */
+  color: #333; /* Universal text color */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+/* App component layout */
+.App {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  height: 90%;
+}
+
+/* Shared card styles for lists */
+.card {
+  border-radius: 10px;
+  padding: 20px;
+  width: 45%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: white; /* White background for cards */
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Darker shadow on hover */
+}
+
+.card h2 {
+  text-align: center;
+  color: #5d3fd3; /* Purple color for headings */
+}
+
+.card button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  background-color: #4CAF50; /* Green background for buttons */
+  color: white;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.card button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Employee list specific styles */
+.employee-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.employee-item.dimmed {
+  opacity: 0.4;
+}
+
+/* Team members specific styles */
+.team-member {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort-button {
+  padding: 5px 10px;
+  width: auto;
+  align-self: center;
+  background-color: #008CBA; /* Blue background for sorting button */
+  color: white;
+}
+
+.sort-button:hover {
+  background-color: #007ba7; /* Slightly darker blue on hover */
+}
+
+.average-age {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #555;
+  font-weight: bold; /* Make average age text bold */
 }
